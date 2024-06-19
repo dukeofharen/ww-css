@@ -1,30 +1,33 @@
+@use "../config" as conf;
+@use "../utils/breakpoints" as bp;
+
 // Inspired by Bulma (https://github.com/jgthms/bulma/blob/main/sass/layout/container.scss)
-$offset: $gap * 2;
+$offset: conf.$gap * 2;
 .container {
   flex-grow: 1;
   margin: 0 auto;
   position: relative;
   width: 100%;
-  padding-left: $gap;
-  padding-right: $gap;
+  padding-left: conf.$gap;
+  padding-right: conf.$gap;
 
-  @include breakpoint-down(md) {
+  @include bp.breakpoint-down(md) {
     max-width: 100%;
   }
 
-  @include breakpoint-between(md, lg) {
-    max-width: map-get($grid-breakpoints, md) - $offset;
+  @include bp.breakpoint-between(md, lg) {
+    max-width: map-get(conf.$grid-breakpoints, md) - $offset;
   }
 
-  @include breakpoint-between(lg, xl) {
-    max-width: map-get($grid-breakpoints, lg) - $offset;
+  @include bp.breakpoint-between(lg, xl) {
+    max-width: map-get(conf.$grid-breakpoints, lg) - $offset;
   }
 
-  @include breakpoint-between(xl, xxl) {
-    max-width: map-get($grid-breakpoints, xl) - $offset;
+  @include bp.breakpoint-between(xl, xxl) {
+    max-width: map-get(conf.$grid-breakpoints, xl) - $offset;
   }
 
-  @include breakpoint-up(xxl) {
-    max-width: map-get($grid-breakpoints, xxl) - $offset;
+  @include bp.breakpoint-up(xxl) {
+    max-width: map-get(conf.$grid-breakpoints, xxl) - $offset;
   }
 }

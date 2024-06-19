@@ -1,9 +1,8 @@
-// Padding & margin
-$spacer: 1;
-$dimensions: (0: 0, 1: 0.25, 2: 0.5, 3: 1, 4: 1.5, 5: 3);
+@use "../config" as conf;
 
-@each $index, $multiplier in $dimensions {
-  $value: $spacer * $multiplier;
+// Padding & margin
+@each $index, $multiplier in conf.$dimensions {
+  $value: conf.$spacer * $multiplier;
   .p-#{$index} {
     padding: #{$value}rem !important;
   }
