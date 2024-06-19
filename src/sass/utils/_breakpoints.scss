@@ -1,14 +1,14 @@
 // Breakpoint specific styling and mixins.
 @mixin breakpoint-up($name) {
   $breakpoint: map-get($grid-breakpoints, $name);
-  @media screen and (min-width: #{$breakpoint}px) {
+  @media screen and (min-width: #{$breakpoint}) {
     @content;
   }
 }
 
 @mixin breakpoint-down($name) {
   $breakpoint: map-get($grid-breakpoints, $name);
-  @media screen and (max-width: #{$breakpoint}px) {
+  @media screen and (max-width: #{$breakpoint}) {
     @content;
   }
 }
@@ -16,7 +16,7 @@
 @mixin breakpoint-between($name-left, $name-right) {
   $breakpoint-left: map-get($grid-breakpoints, $name-left);
   $breakpoint-right: map-get($grid-breakpoints, $name-right);
-  @media screen and (min-width: #{$breakpoint-left}px) and (max-width: #{$breakpoint-right}px) {
+  @media screen and (min-width: #{$breakpoint-left}) and (max-width: #{$breakpoint-right}) {
     @content;
   }
 }

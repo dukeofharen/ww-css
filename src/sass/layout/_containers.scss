@@ -1,0 +1,30 @@
+// Inspired by Bulma (https://github.com/jgthms/bulma/blob/main/sass/layout/container.scss)
+$offset: $gap * 2;
+.container {
+  flex-grow: 1;
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+  padding-left: $gap;
+  padding-right: $gap;
+
+  @include breakpoint-down(md) {
+    max-width: 100%;
+  }
+
+  @include breakpoint-between(md, lg) {
+    max-width: map-get($grid-breakpoints, md) - $offset;
+  }
+
+  @include breakpoint-between(lg, xl) {
+    max-width: map-get($grid-breakpoints, lg) - $offset;
+  }
+
+  @include breakpoint-between(xl, xxl) {
+    max-width: map-get($grid-breakpoints, xl) - $offset;
+  }
+
+  @include breakpoint-up(xxl) {
+    max-width: map-get($grid-breakpoints, xxl) - $offset;
+  }
+}
