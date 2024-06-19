@@ -1,6 +1,7 @@
 @use "../config" as conf;
 @use "../utils/breakpoints" as bp;
 
+// TODO menu uitklapbaar
 .navbar {
   background-color: conf.$navbar-background-color;
   display: flex;
@@ -19,14 +20,19 @@
     @include bp.breakpoint-down(lg) {
       padding-left: 0;
       padding-right: 0;
+      flex-direction: column;
+      justify-content: center;
 
-      .navbar-brand a {
-        &.navbar-item {
-          margin-inline-start: 0;
-        }
+      .navbar-brand {
+        min-height: conf.$min-navbar-height;
+        a {
+          &.navbar-item {
+            margin-inline-start: 0;
+          }
 
-        &.navbar-burger {
-          margin-inline-end: 0.75rem;
+          &.navbar-burger {
+            margin-inline-end: 0.75rem;
+          }
         }
       }
     }
@@ -63,22 +69,22 @@
       span {
         background-color: currentColor;
         display: block;
-        height: 2px; // TODO
+        height: 2px;
         position: absolute;
         transform-origin: center;
         transition-property: background-color, color, opacity, transform;
         width: 20px;
 
         &:nth-child(1), &:nth-child(2) {
-          left: calc(50% - (20px) / 2); // TODO
+          left: calc(50% - (20px) / 2);
         }
 
         &:nth-child(3) {
-          bottom: calc(50% + 5px); // TODO
+          bottom: calc(50% + 5px);
         }
 
         &:nth-child(4) {
-          top: calc(50% + 5px); // TODO
+          top: calc(50% + 5px);
         }
       }
     }
@@ -137,6 +143,10 @@
   .navbar-menu {
     display: none;
     @include bp.breakpoint-up(lg) {
+      display: flex;
+    }
+
+    &.is-active {
       display: flex;
     }
 

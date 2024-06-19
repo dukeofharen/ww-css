@@ -522,6 +522,11 @@ summary {
   .navbar .container {
     padding-left: 0;
     padding-right: 0;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .navbar .container .navbar-brand {
+    min-height: 52px;
   }
   .navbar .container .navbar-brand a.navbar-item {
     margin-inline-start: 0;
@@ -632,6 +637,9 @@ summary {
   .navbar .navbar-menu {
     display: flex;
   }
+}
+.navbar .navbar-menu.is-active {
+  display: flex;
 }
 .navbar .navbar-menu .navbar-start {
   display: flex;
