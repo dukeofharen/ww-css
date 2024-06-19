@@ -15,6 +15,21 @@
     .navbar-brand .navbar-item {
       margin-inline-start: -0.75rem;
     }
+
+    @include bp.breakpoint-down(lg) {
+      padding-left: 0;
+      padding-right: 0;
+
+      .navbar-brand a {
+        &.navbar-item {
+          margin-inline-start: 0;
+        }
+
+        &.navbar-burger {
+          margin-inline-end: 0.75rem;
+        }
+      }
+    }
   }
 
   .navbar-brand {
@@ -38,11 +53,11 @@
       cursor: pointer;
       flex-direction: column;
       flex-shrink: 0;
-      height: 2.5rem;
+      height: 2rem;
       justify-content: center;
       position: relative;
       vertical-align: top;
-      width: 2.5rem;
+      width: 2rem;
       align-self: center;
 
       span {
@@ -51,7 +66,7 @@
         height: 2px; // TODO
         position: absolute;
         transform-origin: center;
-        transition-property: background-color,color,opacity,transform;
+        transition-property: background-color, color, opacity, transform;
         width: 20px;
 
         &:nth-child(1), &:nth-child(2) {

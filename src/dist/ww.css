@@ -518,6 +518,18 @@ summary {
 .navbar .container .navbar-brand .navbar-item {
   margin-inline-start: -0.75rem;
 }
+@media screen and (max-width: 992px) {
+  .navbar .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .navbar .container .navbar-brand a.navbar-item {
+    margin-inline-start: 0;
+  }
+  .navbar .container .navbar-brand a.navbar-burger {
+    margin-inline-end: 0.75rem;
+  }
+}
 .navbar .navbar-brand {
   display: flex;
   align-items: stretch;
@@ -537,11 +549,11 @@ summary {
   cursor: pointer;
   flex-direction: column;
   flex-shrink: 0;
-  height: 2.5rem;
+  height: 2rem;
   justify-content: center;
   position: relative;
   vertical-align: top;
-  width: 2.5rem;
+  width: 2rem;
   align-self: center;
 }
 @media screen and (min-width: 992px) {
