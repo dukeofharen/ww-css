@@ -1,0 +1,49 @@
+@use "../config" as conf;
+
+.navbar {
+  background-color: deeppink; //TODO
+  display: flex;
+  align-items: stretch;
+  min-height: conf.$min-navbar-height;
+
+  .container {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .navbar-brand {
+    display: flex;
+    align-items: stretch;
+    flex-shrink: 0;
+  }
+
+  .navbar-item {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0.75rem;
+    line-height: 1.5;
+    position: relative
+  }
+
+  .navbar-menu {
+    display: flex;
+    align-items: stretch;
+    flex-grow: 1;
+    flex-shrink: 0;
+    padding: 0;
+
+    .navbar-start {
+      display: flex;
+      align-items: stretch;
+      justify-content: flex-start;
+    }
+
+    .navbar-end {
+      display: flex;
+      align-items: stretch;
+      justify-content: flex-end;
+      margin-inline-start: auto;
+    }
+  }
+}

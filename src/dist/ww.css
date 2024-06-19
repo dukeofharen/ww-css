@@ -504,8 +504,58 @@ summary {
   }
 }
 
+.navbar {
+  background-color: deeppink;
+  display: flex;
+  align-items: stretch;
+  min-height: 52px;
+}
+.navbar .container {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+}
+.navbar .navbar-brand {
+  display: flex;
+  align-items: stretch;
+  flex-shrink: 0;
+}
+.navbar .navbar-item {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+  line-height: 1.5;
+  position: relative;
+}
+.navbar .navbar-menu {
+  display: flex;
+  align-items: stretch;
+  flex-grow: 1;
+  flex-shrink: 0;
+  padding: 0;
+}
+.navbar .navbar-menu .navbar-start {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+.navbar .navbar-menu .navbar-end {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-end;
+  margin-inline-start: auto;
+}
+
 body {
   font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: #0000EE;
+}
+a:hover {
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=ww.css.map */

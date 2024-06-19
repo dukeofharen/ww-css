@@ -7,8 +7,35 @@
     <link rel="stylesheet" type="text/css" href="dist/ww.css"/>
 </head>
 <body>
-<nav>
-    Navbar
+<nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/">WW.CSS</a>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="testNavbar">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="testNavbar" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item is-active" href="/">Home</a>
+                <a class="navbar-item" href="#subpage">Sub page</a>
+<!--                <div class="navbar-item has-dropdown is-hoverable">-->
+<!--                    <a class="navbar-link">Dropdown menu</a>-->
+<!--                    <div class="navbar-dropdown">-->
+<!--                        <a class="navbar-item" href="#subitem1">Sub item 1</a>-->
+<!--                        <a class="navbar-item" href="#subitem2">Sub item 2</a>-->
+<!--                        <a class="navbar-item" href="#subitem3">Sub item 3</a>-->
+<!--                    </div>-->
+<!--                </div>-->
+                <a class="navbar-item" href="#contact">Contact</a>
+            </div>
+        </div>
+    </div>
 </nav>
 <main>
     <div class="container">
@@ -21,6 +48,7 @@
             <h6>This is an H6 title</h6>
         </div>
         <div>
+            <p>This is a <a href="https://winterwerp.nl">link</a>.</p>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium arcu massa, ut dignissim ipsum
                 ullamcorper vitae. Quisque at turpis dignissim, maximus ex luctus, lobortis augue. Duis ullamcorper ante
