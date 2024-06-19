@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "css:watch": "sass sass/style.scss dist/ww.css --watch",
-    "css:build": "sass sass/style.scss dist/ww.css --style compressed",
+    "css:build": "sass sass/style.scss dist/ww.min.css --style compressed && sass sass/style.scss dist/ww.css",
     "run-server": "http-server",
-    "start": "concurrently \"npm run css:watch\" \"npm run run-server\""
+    "start": "concurrently \"npm run css:watch\" \"npm run run-server\"",
+    "build": "npm run css:build"
   },
   "author": "",
   "license": "ISC",
