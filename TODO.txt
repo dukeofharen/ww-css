@@ -5,3 +5,4 @@
    - Responsive (incl. JS code)
    - Submenu's
    - Navbar achtergrondkleur (wellicht werken met thema's? Ook voor knoppen)
+- Footer

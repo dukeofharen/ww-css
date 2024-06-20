@@ -25,6 +25,7 @@
 
       .navbar-brand {
         min-height: conf.$min-navbar-height;
+
         a {
           &.navbar-item {
             margin-inline-start: 0;
@@ -96,9 +97,22 @@
     padding: 0.5rem 0.75rem;
 
     &.has-dropdown {
+      @include bp.breakpoint-down(lg) {
+        flex-direction: column;
+        align-items: start;
+        padding: 0;
+
+        .navbar-link {
+          width: 100%;
+          padding: 0.5rem 0.75rem;
+        }
+      }
+
       &:hover > .navbar-dropdown {
-        visibility: visible;
-        opacity: 1;
+        @include bp.breakpoint-up(lg) {
+          visibility: visible;
+          opacity: 1;
+        }
       }
     }
   }
@@ -122,6 +136,9 @@
 
     &::after {
       inset-inline-end: 0.5em;
+      @include bp.breakpoint-down(lg) {
+        inset-inline-end: 1.2em;
+      }
       border: .125em solid conf.$navbar-link-color;
       border-right: 0;
       border-top: 0;
@@ -168,14 +185,30 @@
       margin-inline-start: auto;
     }
 
+    .navbar-start, .navbar-end {
+      @include bp.breakpoint-down(lg) {
+        flex-direction: column;
+        width: 100%;
+      }
+    }
+
     .navbar-dropdown {
-      visibility: hidden;
-      opacity: 0;
       overflow: hidden;
       z-index: 20;
       font-size: 0.875rem;
-      position: absolute;
-      top: 100%;
+      @include bp.breakpoint-up(lg) {
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        top: 100%;
+      }
+
+      @include bp.breakpoint-down(lg) {
+        display: none;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+
       min-width: 100%;
       background-color: conf.$navbar-dropdown-background-color;
       inset-inline-start: 0;
@@ -188,6 +221,10 @@
       .navbar-link:hover,
       .navbar-item.is-active {
         background-color: conf.$navbar-dropdown-link-hover-color;
+      }
+
+      &.is-active {
+        display: block;
       }
     }
   }

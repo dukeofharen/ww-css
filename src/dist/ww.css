@@ -589,9 +589,22 @@ summary {
   align-items: center;
   padding: 0.5rem 0.75rem;
 }
-.navbar .navbar-item.has-dropdown:hover > .navbar-dropdown {
-  visibility: visible;
-  opacity: 1;
+@media screen and (max-width: 992px) {
+  .navbar .navbar-item.has-dropdown {
+    flex-direction: column;
+    align-items: start;
+    padding: 0;
+  }
+  .navbar .navbar-item.has-dropdown .navbar-link {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .navbar .navbar-item.has-dropdown:hover > .navbar-dropdown {
+    visibility: visible;
+    opacity: 1;
+  }
 }
 .navbar .navbar-item,
 .navbar .navbar-link {
@@ -626,6 +639,11 @@ summary {
   transition-property: border-color;
   width: 0.625em;
 }
+@media screen and (max-width: 992px) {
+  .navbar .navbar-link::after {
+    inset-inline-end: 1.2em;
+  }
+}
 .navbar .navbar-menu {
   display: none;
   align-items: stretch;
@@ -652,14 +670,16 @@ summary {
   justify-content: flex-end;
   margin-inline-start: auto;
 }
+@media screen and (max-width: 992px) {
+  .navbar .navbar-menu .navbar-start, .navbar .navbar-menu .navbar-end {
+    flex-direction: column;
+    width: 100%;
+  }
+}
 .navbar .navbar-menu .navbar-dropdown {
-  visibility: hidden;
-  opacity: 0;
   overflow: hidden;
   z-index: 20;
   font-size: 0.875rem;
-  position: absolute;
-  top: 100%;
   min-width: 100%;
   background-color: #FFFFFF;
   inset-inline-start: 0;
@@ -668,10 +688,28 @@ summary {
   transition: visibility 0.1s, opacity 0.1s linear;
   border: 1px solid #f0f2f4;
 }
+@media screen and (min-width: 992px) {
+  .navbar .navbar-menu .navbar-dropdown {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+  }
+}
+@media screen and (max-width: 992px) {
+  .navbar .navbar-menu .navbar-dropdown {
+    display: none;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
 .navbar .navbar-menu .navbar-dropdown .navbar-item:hover,
 .navbar .navbar-menu .navbar-dropdown .navbar-link:hover,
 .navbar .navbar-menu .navbar-dropdown .navbar-item.is-active {
   background-color: #f0f2f4;
+}
+.navbar .navbar-menu .navbar-dropdown.is-active {
+  display: block;
 }
 
 body {
