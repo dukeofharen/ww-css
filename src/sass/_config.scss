@@ -2,6 +2,7 @@
 $light: #FFFFFF;
 $light-gray: #f0f2f4;
 $dark: #222222;
+$dark-darker: #161616;
 $link: #4258ff;
 $primary: #00d1b2;
 $primary-darker: #00ad94;
@@ -44,3 +45,6 @@ $navbar-dropdown-link-hover-color: $light-gray;
 $navbar-dropdown-border-radius: 12px;
 $navbar-dropdown-border-color: $light-gray;
 $navbar-hamburger-color: $dark;
+
+// Buttons
+$button-border-radius: 5px;
