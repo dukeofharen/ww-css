@@ -1,9 +1,31 @@
 @use "../config" as conf;
 @use "../utils/breakpoints" as bp;
+@use "../themes" as theme;
 
-// TODO menu uitklapbaar
 .navbar {
-  background-color: conf.$navbar-background-color;
+  @each $name, $value in theme.$theme-map {
+    &.navbar-#{$name} {
+      background-color: map-get($value, "main-color");
+
+      .navbar-item:hover,
+      .navbar-link:hover,
+      .navbar-item.is-active {
+        background-color: map-get($value, "main-color-darker");
+      }
+
+      $link-color: map-get($value, "text-color");
+      .navbar-item,
+      .navbar-link {
+        color: $link-color;
+      }
+
+      .navbar-link::after {
+        //border: .125em solid conf.$navbar-link-color;
+        border-color: $link-color;
+      }
+    }
+  }
+
   display: flex;
   align-items: stretch;
   min-height: conf.$min-navbar-height;
@@ -123,12 +145,6 @@
     position: relative;
     color: conf.$navbar-link-color;
     cursor: pointer;
-  }
-
-  .navbar-item:hover,
-  .navbar-link:hover,
-  .navbar-item.is-active {
-    background-color: conf.$navbar-link-hover-color;
   }
 
   .navbar-link {

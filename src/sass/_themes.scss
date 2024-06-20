@@ -1,0 +1,9 @@
+@use "./config" as conf;
+
+$theme-map: (
+        "primary": (
+                "main-color": conf.$primary,
+                "main-color-darker": conf.$primary-darker,
+                "text-color": conf.$dark
+        )
+)

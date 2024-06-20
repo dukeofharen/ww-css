@@ -505,10 +505,24 @@ summary {
 }
 
 .navbar {
-  background-color: #00d1b2;
   display: flex;
   align-items: stretch;
   min-height: 52px;
+}
+.navbar.navbar-primary {
+  background-color: #00d1b2;
+}
+.navbar.navbar-primary .navbar-item:hover,
+.navbar.navbar-primary .navbar-link:hover,
+.navbar.navbar-primary .navbar-item.is-active {
+  background-color: #00ad94;
+}
+.navbar.navbar-primary .navbar-item,
+.navbar.navbar-primary .navbar-link {
+  color: #222222;
+}
+.navbar.navbar-primary .navbar-link::after {
+  border-color: #222222;
 }
 .navbar .container {
   display: flex;
@@ -612,11 +626,6 @@ summary {
   position: relative;
   color: #222222;
   cursor: pointer;
-}
-.navbar .navbar-item:hover,
-.navbar .navbar-link:hover,
-.navbar .navbar-item.is-active {
-  background-color: #48c78e;
 }
 .navbar .navbar-link {
   padding-inline-end: 2em;
