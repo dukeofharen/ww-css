@@ -5,5 +5,25 @@ $theme-map: (
                 "main-color": conf.$primary,
                 "main-color-darker": conf.$primary-darker,
                 "text-color": conf.$dark
+        ),
+        "info": (
+                "main-color": conf.$info,
+                "main-color-darker": conf.$info-darker,
+                "text-color": conf.$dark
+        ),
+        "success": (
+                "main-color": conf.$success,
+                "main-color-darker": conf.$success-darker,
+                "text-color": conf.$dark
+        ),
+        "warning": (
+                "main-color": conf.$warning,
+                "main-color-darker": conf.$warning-darker,
+                "text-color": conf.$dark
+        ),
+        "danger": (
+                "main-color": conf.$danger,
+                "main-color-darker": conf.$danger-darker,
+                "text-color": conf.$dark
         )
 )

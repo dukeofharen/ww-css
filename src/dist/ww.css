@@ -524,6 +524,66 @@ summary {
 .navbar.navbar-primary .navbar-link::after {
   border-color: #222222;
 }
+.navbar.navbar-info {
+  background-color: #66d1ff;
+}
+.navbar.navbar-info .navbar-item:hover,
+.navbar.navbar-info .navbar-link:hover,
+.navbar.navbar-info .navbar-item.is-active {
+  background-color: #5cc3ef;
+}
+.navbar.navbar-info .navbar-item,
+.navbar.navbar-info .navbar-link {
+  color: #222222;
+}
+.navbar.navbar-info .navbar-link::after {
+  border-color: #222222;
+}
+.navbar.navbar-success {
+  background-color: #48c78e;
+}
+.navbar.navbar-success .navbar-item:hover,
+.navbar.navbar-success .navbar-link:hover,
+.navbar.navbar-success .navbar-item.is-active {
+  background-color: #3eae7c;
+}
+.navbar.navbar-success .navbar-item,
+.navbar.navbar-success .navbar-link {
+  color: #222222;
+}
+.navbar.navbar-success .navbar-link::after {
+  border-color: #222222;
+}
+.navbar.navbar-warning {
+  background-color: #ffb70f;
+}
+.navbar.navbar-warning .navbar-item:hover,
+.navbar.navbar-warning .navbar-link:hover,
+.navbar.navbar-warning .navbar-item.is-active {
+  background-color: #dea113;
+}
+.navbar.navbar-warning .navbar-item,
+.navbar.navbar-warning .navbar-link {
+  color: #222222;
+}
+.navbar.navbar-warning .navbar-link::after {
+  border-color: #222222;
+}
+.navbar.navbar-danger {
+  background-color: #ff6685;
+}
+.navbar.navbar-danger .navbar-item:hover,
+.navbar.navbar-danger .navbar-link:hover,
+.navbar.navbar-danger .navbar-item.is-active {
+  background-color: #ca516a;
+}
+.navbar.navbar-danger .navbar-item,
+.navbar.navbar-danger .navbar-link {
+  color: #222222;
+}
+.navbar.navbar-danger .navbar-link::after {
+  border-color: #222222;
+}
 .navbar .container {
   display: flex;
   align-items: stretch;
