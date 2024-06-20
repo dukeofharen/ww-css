@@ -1,0 +1,5 @@
+@use "../config" as conf;
+
+.section {
+  padding: conf.$section-padding;
+}
