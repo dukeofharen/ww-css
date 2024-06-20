@@ -3,6 +3,7 @@
 body {
   font-size: conf.$default-body-font-size;
   color: conf.$default-text-color;
+  line-height: conf.$default-line-height;
 }
 
 a {
