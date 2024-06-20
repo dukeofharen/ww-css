@@ -1492,7 +1492,7 @@ summary {
   top: 50%;
   transform: rotate(-45deg);
   transform-origin: center;
-  transition-duration: var(--bulma-duration);
+  transition-duration: 250ms;
   transition-property: border-color;
   width: 0.625em;
 }
