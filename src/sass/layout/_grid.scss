@@ -3,6 +3,13 @@
 
 .grid-row {
   display: grid;
+
+  @for $i from 1 through 12 {
+    &.cols-#{$i} {
+      grid-template-columns: repeat($i, 1fr);
+    }
+  }
+
   @for $i from 1 through 12 {
     @each $breakpoint, $value in conf.$grid-breakpoints {
       &.cols-#{$i}-#{$breakpoint}-up {
@@ -16,10 +23,6 @@
           grid-template-columns: repeat($i, 1fr);
         }
       }
-    }
-
-    &.cols-#{$i} {
-      grid-template-columns: repeat($i, 1fr);
     }
   }
 }
