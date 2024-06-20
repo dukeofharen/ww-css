@@ -1,6 +1,23 @@
+@use "../config" as conf;
+@use "../utils/breakpoints" as bp;
+
 .grid-row {
   display: grid;
   @for $i from 1 through 12 {
+    @each $breakpoint, $value in conf.$grid-breakpoints {
+      &.cols-#{$i}-#{$breakpoint}-up {
+        @include bp.breakpoint-up($breakpoint) {
+          grid-template-columns: repeat($i, 1fr);
+        }
+      }
+
+      &.cols-#{$i}-#{$breakpoint}-down {
+        @include bp.breakpoint-down($breakpoint) {
+          grid-template-columns: repeat($i, 1fr);
+        }
+      }
+    }
+
     &.cols-#{$i} {
       grid-template-columns: repeat($i, 1fr);
     }
