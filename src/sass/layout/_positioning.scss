@@ -42,4 +42,8 @@
   .mb-#{$index} {
     margin-bottom: #{$value}rem !important;
   }
+
+  .gap-#{$index} {
+    gap: #{$value}rem !important;
+  }
 }

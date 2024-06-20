@@ -1,6 +1,3 @@
 - Kleuren
 - Buttons
-- (Grid) cols
-- Navbar
-   - Navbar achtergrondkleur (wellicht werken met thema's? Ook voor knoppen)
 - Footer

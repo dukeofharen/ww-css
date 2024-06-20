@@ -270,6 +270,10 @@ summary {
   margin-bottom: 0rem !important;
 }
 
+.gap-0 {
+  gap: 0rem !important;
+}
+
 .p-1 {
   padding: 0.25rem !important;
 }
@@ -308,6 +312,10 @@ summary {
 
 .mb-1 {
   margin-bottom: 0.25rem !important;
+}
+
+.gap-1 {
+  gap: 0.25rem !important;
 }
 
 .p-2 {
@@ -350,6 +358,10 @@ summary {
   margin-bottom: 0.5rem !important;
 }
 
+.gap-2 {
+  gap: 0.5rem !important;
+}
+
 .p-3 {
   padding: 1rem !important;
 }
@@ -388,6 +400,10 @@ summary {
 
 .mb-3 {
   margin-bottom: 1rem !important;
+}
+
+.gap-3 {
+  gap: 1rem !important;
 }
 
 .p-4 {
@@ -430,6 +446,10 @@ summary {
   margin-bottom: 1.5rem !important;
 }
 
+.gap-4 {
+  gap: 1.5rem !important;
+}
+
 .p-5 {
   padding: 3rem !important;
 }
@@ -470,6 +490,10 @@ summary {
   margin-bottom: 3rem !important;
 }
 
+.gap-5 {
+  gap: 3rem !important;
+}
+
 .container {
   flex-grow: 1;
   margin: 0 auto;
@@ -502,6 +526,46 @@ summary {
   .container {
     max-width: 1336px;
   }
+}
+
+.grid-row {
+  display: grid;
+}
+.grid-row.cols-1 {
+  grid-template-columns: repeat(1, 1fr);
+}
+.grid-row.cols-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid-row.cols-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid-row.cols-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+.grid-row.cols-5 {
+  grid-template-columns: repeat(5, 1fr);
+}
+.grid-row.cols-6 {
+  grid-template-columns: repeat(6, 1fr);
+}
+.grid-row.cols-7 {
+  grid-template-columns: repeat(7, 1fr);
+}
+.grid-row.cols-8 {
+  grid-template-columns: repeat(8, 1fr);
+}
+.grid-row.cols-9 {
+  grid-template-columns: repeat(9, 1fr);
+}
+.grid-row.cols-10 {
+  grid-template-columns: repeat(10, 1fr);
+}
+.grid-row.cols-11 {
+  grid-template-columns: repeat(11, 1fr);
+}
+.grid-row.cols-12 {
+  grid-template-columns: repeat(12, 1fr);
 }
 
 .navbar {
