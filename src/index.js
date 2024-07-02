@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
 
     // Add a click event on each of them
-    $navbarBurgers.forEach( el => {
+    $navbarBurgers.forEach(el => {
         el.addEventListener('click', () => {
 
             // Get the target from the "data-target" attribute
@@ -27,5 +27,38 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             $dropdown.classList.toggle('is-active');
         });
+    });
+
+    // Link modals and modal buttons.
+    const $buttons = Array.prototype.slice.call(document.querySelectorAll('.modal-button'), 0);
+    $buttons.forEach(button => {
+        const modalId = button.dataset.modalid;
+        const $modal = document.getElementById(modalId);
+
+        if ($modal) {
+            const hideModal = () => {
+                $modal.style.display = 'none';
+            }
+
+            button.addEventListener('click', function (event) {
+                $modal.style.display = 'flex';
+                const $closeButton = $modal.querySelector(".close");
+                if ($closeButton) {
+                    $closeButton.addEventListener('click', function () {
+                        hideModal();
+                    })
+                }
+            });
+            window.addEventListener('click', function (event) {
+                if (event.target === $modal) {
+                    hideModal();
+                }
+            });
+            document.addEventListener('keydown', function (event) {
+                if (event.key === "Escape") {
+                    hideModal();
+                }
+            })
+        }
     });
 });
