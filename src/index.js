@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 $modal.style.display = 'none';
             }
 
-            button.addEventListener('click', function (event) {
+            button.addEventListener('click', function () {
                 $modal.style.display = 'flex';
                 const $closeButton = $modal.querySelector(".close");
                 if ($closeButton) {
