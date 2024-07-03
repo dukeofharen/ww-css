@@ -1,6 +1,6 @@
 @use "../config" as conf;
 
-.modal {
+.#{conf.$class-prefix}modal {
   display: none;
   cursor: pointer;
   justify-content: center;

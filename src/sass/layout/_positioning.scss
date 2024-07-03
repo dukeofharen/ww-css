@@ -3,47 +3,47 @@
 // Padding & margin
 @each $index, $multiplier in conf.$dimensions {
   $value: conf.$spacer * $multiplier;
-  .p-#{$index} {
+  .#{conf.$class-prefix}p-#{$index} {
     padding: #{$value}rem !important;
   }
 
-  .pl-#{$index} {
+  .#{conf.$class-prefix}pl-#{$index} {
     padding-left: #{$value}rem !important;
   }
 
-  .pr-#{$index} {
+  .#{conf.$class-prefix}pr-#{$index} {
     padding-right: #{$value}rem !important;
   }
 
-  .pt-#{$index} {
+  .#{conf.$class-prefix}pt-#{$index} {
     padding-top: #{$value}rem !important;
   }
 
-  .pb-#{$index} {
+  .#{conf.$class-prefix}pb-#{$index} {
     padding-bottom: #{$value}rem !important;
   }
 
-  .m-#{$index} {
+  .#{conf.$class-prefix}m-#{$index} {
     margin: #{$value}rem !important;
   }
 
-  .ml-#{$index} {
+  .#{conf.$class-prefix}ml-#{$index} {
     margin-left: #{$value}rem !important;
   }
 
-  .mr-#{$index} {
+  .#{conf.$class-prefix}mr-#{$index} {
     margin-right: #{$value}rem !important;
   }
 
-  .mt-#{$index} {
+  .#{conf.$class-prefix}mt-#{$index} {
     margin-top: #{$value}rem !important;
   }
 
-  .mb-#{$index} {
+  .#{conf.$class-prefix}mb-#{$index} {
     margin-bottom: #{$value}rem !important;
   }
 
-  .gap-#{$index} {
+  .#{conf.$class-prefix}gap-#{$index} {
     gap: #{$value}rem !important;
   }
 }

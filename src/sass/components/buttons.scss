@@ -1,7 +1,7 @@
 @use "../config" as conf;
 @use "../themes" as theme;
 
-.btn {
+.#{conf.$class-prefix}btn {
   @each $name, $value in theme.$theme-map {
     &.btn-#{$name} {
       color: map-get($value, "text-color");

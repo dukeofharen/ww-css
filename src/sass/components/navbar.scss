@@ -2,7 +2,7 @@
 @use "../utils/breakpoints" as bp;
 @use "../themes" as theme;
 
-.navbar {
+.#{conf.$class-prefix}navbar {
   @each $name, $value in theme.$theme-map {
     &.navbar-#{$name} {
       background-color: map-get($value, "main-color");

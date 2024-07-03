@@ -1,19 +1,19 @@
 @use "../config" as conf;
 @use "../utils/breakpoints" as bp;
 
-.flex-row {
+.#{conf.$class-prefix}flex-row {
   display: flex;
   flex-wrap: wrap;
 }
 
 @for $i from 1 through 12 {
   $width: calc(100% / (12 / $i));
-  .col-auto {
+  .#{conf.$class-prefix}col-auto {
     flex: 0 0 auto;
     width: auto;
   }
 
-  .col-#{$i} {
+  .#{conf.$class-prefix}col-#{$i} {
     flex: 0 0 auto;
     width: $width;
   }
@@ -24,12 +24,12 @@
 
   @each $breakpoint, $value in conf.$grid-breakpoints {
     @include bp.breakpoint-up($breakpoint) {
-      .col-#{$breakpoint}-auto {
+      .#{conf.$class-prefix}col-#{$breakpoint}-auto {
         flex: 0 0 auto;
         width: auto;
       }
 
-      .col-#{$breakpoint}-#{$i} {
+      .#{conf.$class-prefix}col-#{$breakpoint}-#{$i} {
         flex: 0 0 auto;
         width: $width;
       }

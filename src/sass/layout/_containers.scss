@@ -3,7 +3,7 @@
 
 // Inspired by Bulma (https://github.com/jgthms/bulma/blob/main/sass/layout/container.scss)
 $offset: conf.$gap * 2;
-.container {
+.#{conf.$class-prefix}container {
   flex-grow: 1;
   margin: 0 auto;
   position: relative;

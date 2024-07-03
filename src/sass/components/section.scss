@@ -1,5 +1,5 @@
 @use "../config" as conf;
 
-.section {
+.#{conf.$class-prefix}section {
   padding: conf.$section-padding;
 }

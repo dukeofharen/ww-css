@@ -1,3 +1,5 @@
-.text-center {
+@use "../config" as conf;
+
+.#{conf.$class-prefix}text-center {
   text-align: center;
 }

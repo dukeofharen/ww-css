@@ -1,3 +1,5 @@
-.footer {
+@use "../config" as conf;
+
+.#{conf.$class-prefix}footer {
   padding: 3rem 1.5rem 6rem;
 }

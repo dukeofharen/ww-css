@@ -1,7 +1,7 @@
 @use "../config" as conf;
 @use "../utils/breakpoints" as bp;
 
-.grid-row {
+.#{conf.$class-prefix}grid-row {
   display: grid;
 
   @for $i from 1 through 12 {
