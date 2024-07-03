@@ -5,10 +5,11 @@
   "main": "index.js",
   "scripts": {
     "css:watch": "sass sass/main.scss dist/ww.css --watch",
-    "css:build": "sass sass/main.scss dist/ww.min.css --style compressed && sass sass/main.scss dist/ww.css",
+    "css:build:default": "sass sass/main.scss dist/ww.min.css --style compressed && sass sass/main.scss dist/ww.css",
+    "css:build:no-normalize": "sass sass/main-no-normalize.scss dist/ww-no-normalize.min.css --style compressed && sass sass/main-no-normalize.scss dist/ww-no-normalize.css",
     "run-server": "http-server",
     "start": "concurrently \"npm run css:watch\" \"npm run run-server\"",
-    "build": "npm run css:build"
+    "build": "npm run css:build:default && npm run css:build:no-normalize"
   },
   "author": "",
   "license": "ISC",

@@ -1,0 +1,4 @@
+@use "./config" with (
+  $load-normalize: false
+);
+@import "./main";

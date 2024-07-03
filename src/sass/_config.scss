@@ -1,31 +1,31 @@
 // Configuration
-$load-normalize: true;
+$load-normalize: true !default;
 
 // Color palettes (inspired by Bulma)
-$light: #FFFFFF;
-$light-gray: #f0f2f4;
-$dark: #222222;
-$dark-darker: #161616;
-$link: #4258ff;
-$primary: #00d1b2;
-$primary-darker: #00ad94;
-$info: #66d1ff;
-$info-darker: #5cc3ef;
-$success: #48c78e;
-$success-darker: #3eae7c;
-$warning: #ffb70f;
-$warning-darker: #dea113;
-$danger: #ff6685;
-$danger-darker: #ca516a;
+$light: #FFFFFF !default;
+$light-gray: #f0f2f4 !default;
+$dark: #222222 !default;
+$dark-darker: #161616 !default;
+$link: #4258ff !default;
+$primary: #00d1b2 !default;
+$primary-darker: #00ad94 !default;
+$info: #66d1ff !default;
+$info-darker: #5cc3ef !default;
+$success: #48c78e !default;
+$success-darker: #3eae7c !default;
+$warning: #ffb70f !default;
+$warning-darker: #dea113 !default;
+$danger: #ff6685 !default;
+$danger-darker: #ca516a !default;
 
 // General defaults
-$default-body-font-size: 16px;
-$default-line-height: $default-body-font-size * 1.5;
-$default-text-color: $dark;
-$default-link-color: $link;
+$default-body-font-size: 16px !default;
+$default-line-height: $default-body-font-size * 1.5 !default;
+$default-text-color: $dark !default;
+$default-link-color: $link !default;
 
 // Positioning
-$gap: 32px;
+$gap: 32px !default;
 
 // Breakpoints: they represent a minimum (or maximum) view width
 $grid-breakpoints: (
@@ -35,23 +35,23 @@ $grid-breakpoints: (
         lg: 992px,
         xl: 1200px,
         xxl: 1400px
-);
+) !default;
 
 // Positioning
-$spacer: 1;
-$dimensions: (0: 0, 1: 0.25, 2: 0.5, 3: 1, 4: 1.5, 5: 3);
+$spacer: 1 !default;
+$dimensions: (0: 0, 1: 0.25, 2: 0.5, 3: 1, 4: 1.5, 5: 3) !default;
 
 // Navbar
-$min-navbar-height: 52px;
-$navbar-link-color: $dark;
-$navbar-dropdown-background-color: $light;
-$navbar-dropdown-link-hover-color: $light-gray;
-$navbar-dropdown-border-radius: 12px;
-$navbar-dropdown-border-color: $light-gray;
-$navbar-hamburger-color: $dark;
+$min-navbar-height: 52px !default;
+$navbar-link-color: $dark !default;
+$navbar-dropdown-background-color: $light !default;
+$navbar-dropdown-link-hover-color: $light-gray !default;
+$navbar-dropdown-border-radius: 12px !default;
+$navbar-dropdown-border-color: $light-gray !default;
+$navbar-hamburger-color: $dark !default;
 
 // Buttons
-$button-border-radius: 5px;
+$button-border-radius: 5px !default;
 
 // Section
-$section-padding: 3rem;
+$section-padding: 3rem !default;
