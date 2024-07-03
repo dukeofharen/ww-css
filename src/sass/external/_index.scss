@@ -1,1 +1,6 @@
-@import "./modern-normalize";
+@use "../config" as conf;
+@use "./modern-normalize" as mn;
+
+@if conf.$load-normalize {
+  @include mn.modern-normalize();
+}
