@@ -234,6 +234,10 @@ summary {
   text-align: center;
 }
 
+.bold {
+  font-weight: bold;
+}
+
 .p-0 {
   padding: 0rem !important;
 }
