@@ -13,7 +13,7 @@
   overflow: auto;
   background-color: rgba(conf.$dark, 0.4);
 
-  .modal-content {
+  .#{conf.$class-prefix}modal-content {
     display: flex;
     flex-direction: column;
     background-color: conf.$light;
@@ -22,11 +22,11 @@
     max-height: 100%;
     cursor: auto;
 
-    .modal-header {
+    .#{conf.$class-prefix}modal-header {
       display: flex;
       justify-content: end;
 
-      .close {
+      .#{conf.$class-prefix}close {
         font-size: 2rem;
         cursor: pointer;
       }

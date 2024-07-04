@@ -4,22 +4,22 @@
 
 .#{conf.$class-prefix}navbar {
   @each $name, $value in theme.$theme-map {
-    &.navbar-#{$name} {
+    &.#{conf.$class-prefix}navbar-#{$name} {
       background-color: map-get($value, "main-color");
 
-      .navbar-item:hover,
-      .navbar-link:hover,
-      .navbar-item.is-active {
+      .#{conf.$class-prefix}navbar-item:hover,
+      .#{conf.$class-prefix}navbar-link:hover,
+      .#{conf.$class-prefix}navbar-item.is-active {
         background-color: map-get($value, "main-color-darker");
       }
 
       $link-color: map-get($value, "text-color");
-      .navbar-item,
-      .navbar-link {
+      .#{conf.$class-prefix}navbar-item,
+      .#{conf.$class-prefix}navbar-link {
         color: $link-color;
       }
 
-      .navbar-link::after {
+      .#{conf.$class-prefix}navbar-link::after {
         border-color: $link-color;
       }
     }
@@ -29,12 +29,12 @@
   align-items: stretch;
   min-height: conf.$min-navbar-height;
 
-  .container {
+  .#{conf.$class-prefix}container {
     display: flex;
     align-items: stretch;
     width: 100%;
 
-    .navbar-brand .navbar-item {
+    .#{conf.$class-prefix}navbar-brand .#{conf.$class-prefix}navbar-item {
       margin-inline-start: -0.75rem;
     }
 
@@ -44,15 +44,15 @@
       flex-direction: column;
       justify-content: center;
 
-      .navbar-brand {
+      .#{conf.$class-prefix}navbar-brand {
         min-height: conf.$min-navbar-height;
 
         a {
-          &.navbar-item {
+          &.#{conf.$class-prefix}navbar-item {
             margin-inline-start: 0;
           }
 
-          &.navbar-burger {
+          &.#{conf.$class-prefix}navbar-burger {
             margin-inline-end: 0.75rem;
           }
         }
