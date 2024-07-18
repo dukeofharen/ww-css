@@ -1,0 +1,55 @@
+@use "../config" as conf;
+
+.#{conf.$class-prefix}form-group {
+  display: flex;
+
+  &.#{conf.$class-prefix}vertical {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  &.#{conf.$class-prefix}horizontal {
+    flex-direction: row;
+    justify-content: start;
+  }
+
+  input:not([type=checkbox]):not([type=radio]):focus,
+  select:focus,
+  textarea:focus,
+  button:focus {
+    outline: 1px solid conf.$dark;
+  }
+
+  .#{conf.$class-prefix}required {
+    color: conf.$form-control-default-required-color;
+    font-weight: bold;
+  }
+}
+
+.#{conf.$class-prefix}form-control {
+  padding: conf.$form-control-default-padding;
+  border: 1px solid conf.$form-control-default-border-color;
+  background-color: conf.$form-control-default-background-color;
+
+  &.#{conf.$class-prefix}hide-arrows {
+    -moz-appearance: textfield;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+}
+
+.#{conf.$class-prefix}form-radio {
+  input[type="radio"] {
+    margin-right: conf.$form-control-radio-check-default-right-margin;
+  }
+}
+
+.#{conf.$class-prefix}form-check {
+  input[type="checkbox"] {
+    margin-right: conf.$form-control-radio-check-default-right-margin;
+  }
+}
