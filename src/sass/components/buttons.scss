@@ -1,14 +1,15 @@
+@use "sass:map";
 @use "../config" as conf;
 @use "../themes" as theme;
 
 .#{conf.$class-prefix}btn {
   @each $name, $value in theme.$theme-map {
     &.#{conf.$class-prefix}btn-#{$name} {
-      color: map-get($value, "text-color");
-      background-color: map-get($value, "main-color");
+      color: map.get($value, "text-color");
+      background-color: map.get($value, "main-color");
 
       &:hover {
-        background-color: map-get($value, "main-color-darker");
+        background-color: map.get($value, "main-color-darker");
       }
     }
   }

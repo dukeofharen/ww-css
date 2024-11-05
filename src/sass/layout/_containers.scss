@@ -1,3 +1,4 @@
+@use "sass:map";
 @use "../config" as conf;
 @use "../utils/breakpoints" as bp;
 
@@ -16,18 +17,18 @@ $offset: conf.$gap * 2;
   }
 
   @include bp.breakpoint-between(md, lg) {
-    max-width: map-get(conf.$grid-breakpoints, md) - $offset;
+    max-width: map.get(conf.$grid-breakpoints, md) - $offset;
   }
 
   @include bp.breakpoint-between(lg, xl) {
-    max-width: map-get(conf.$grid-breakpoints, lg) - $offset;
+    max-width: map.get(conf.$grid-breakpoints, lg) - $offset;
   }
 
   @include bp.breakpoint-between(xl, xxl) {
-    max-width: map-get(conf.$grid-breakpoints, xl) - $offset;
+    max-width: map.get(conf.$grid-breakpoints, xl) - $offset;
   }
 
   @include bp.breakpoint-up(xxl) {
-    max-width: map-get(conf.$grid-breakpoints, xxl) - $offset;
+    max-width: map.get(conf.$grid-breakpoints, xxl) - $offset;
   }
 }
