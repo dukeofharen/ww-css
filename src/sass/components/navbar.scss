@@ -64,17 +64,14 @@
   .navbar-brand {
     display: flex;
     align-items: stretch;
+    flex-shrink: 0;
+
     @include bp.breakpoint-down(xl) {
       justify-content: space-between;
       width: 100%;
     }
-    flex-shrink: 0;
 
     .navbar-burger {
-      @include bp.breakpoint-up(xl) {
-        display: none;
-      }
-
       display: inline-flex;
       align-items: center;
       gap: 1px;
@@ -88,6 +85,10 @@
       vertical-align: top;
       width: 2rem;
       align-self: center;
+
+      @include bp.breakpoint-up(xl) {
+        display: none;
+      }
 
       span {
         background-color: currentColor;
@@ -152,9 +153,6 @@
 
     &::after {
       inset-inline-end: 0.5em;
-      @include bp.breakpoint-down(xl) {
-        inset-inline-end: 1.2em;
-      }
       border: .125em solid conf.$navbar-link-color;
       border-right: 0;
       border-top: 0;
@@ -169,12 +167,21 @@
       transform-origin: center;
       transition-duration: 250ms;
       transition-property: border-color;
-      width: .625em
+      width: .625em;
+
+      @include bp.breakpoint-down(xl) {
+        inset-inline-end: 1.2em;
+      }
     }
   }
 
   .navbar-menu {
     display: none;
+    align-items: stretch;
+    flex-grow: 1;
+    flex-shrink: 0;
+    padding: 0;
+
     @include bp.breakpoint-up(xl) {
       display: flex;
     }
@@ -182,11 +189,6 @@
     &.is-active {
       display: flex;
     }
-
-    align-items: stretch;
-    flex-grow: 1;
-    flex-shrink: 0;
-    padding: 0;
 
     .navbar-start {
       display: flex;
@@ -212,6 +214,14 @@
       overflow: hidden;
       z-index: 20;
       font-size: 0.875rem;
+      min-width: 100%;
+      background-color: conf.$navbar-dropdown-background-color;
+      inset-inline-start: 0;
+      border-bottom-left-radius: conf.$navbar-dropdown-border-radius;
+      border-bottom-right-radius: conf.$navbar-dropdown-border-radius;
+      transition: visibility 0.1s, opacity 0.1s linear;
+      border: 1px solid conf.$navbar-dropdown-border-color;
+
       @include bp.breakpoint-up(xl) {
         opacity: 0;
         visibility: hidden;
@@ -224,14 +234,6 @@
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
       }
-
-      min-width: 100%;
-      background-color: conf.$navbar-dropdown-background-color;
-      inset-inline-start: 0;
-      border-bottom-left-radius: conf.$navbar-dropdown-border-radius;
-      border-bottom-right-radius: conf.$navbar-dropdown-border-radius;
-      transition: visibility 0.1s, opacity 0.1s linear;
-      border: 1px solid conf.$navbar-dropdown-border-color;
 
       .navbar-item:hover,
       .navbar-link:hover,
